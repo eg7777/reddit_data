@@ -7,7 +7,7 @@ This script scrapes Reddit posts and their comments using the Reddit API. Follow
 
 1. Set Up Reddit API Credentials
 
-To get started, create a Reddit application if you don't already have one. Visit Reddit App Preferences to create the app and take note of your credentials.
+To get started, create a Reddit application if you don't already have one. Visit [Reddit App Preferences](https://www.reddit.com/prefs/apps) to create app. Take note of your credentials.
 
 
 2.  Configure config.json
@@ -22,11 +22,11 @@ Update the config.json file with your credentials and desired settings. Below is
     "user_agent": "python:my_reddit_scraper:v1.0 (by /u/your_username)",
     "username": "your_username",
     "password": "your_password",
-    "reddit_thread": "funny",
+    "reddit_thread": "worldnews",
     "max_post": 1000,
     "start_post": 1,
     "end_post": 1000,
-    "filename": "funny.json"
+    "filename": "worldnews.json"
 }
 
 ```
@@ -41,7 +41,6 @@ Configuration Fields:
 - reddit\_thread: The subreddit you want to scrape (e.g., worldnews).
 - max\_post: Maximum number of posts to scrape (limit to <=1000).
 - filename: The name of the output file (e.g., worldnews.json).
-- start_post or end_post: Ignore for now
 
 
 
@@ -68,7 +67,7 @@ Execute the script:
 
 
 ```
-python your\_script\_name.py
+python reddit_parser.py
 ```
 
 
@@ -76,7 +75,10 @@ python your\_script\_name.py
 
 
 
-The scraped data will be saved in the file specified by the filename field in config.json (e.g., tesla.json).Notes
+The scraped data will be saved in the file specified by the filename field in config.json (e.g., worldnews.json).
+
+
+Notes:
 
 - Modify `reddit_thread` to scrape a different subreddit.
 - Adjust `max_post` to control the number of posts to scrape (limit to <=1000) 
