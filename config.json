@@ -1,0 +1,12 @@
+{
+    "client_id" : "XXXX",
+    "client_secret" : "XXX",
+    "user_agent" : "python:my_reddit_scraper:v1.0 (by /u/XXXX)",
+    "username" : "XXXX",
+    "password" : "XXXX",
+    "reddit_thread" : "funny",
+    "max_post" : 1000,
+    "start_post" : 1,
+    "end_post" : 1000,
+    "filename" : "funny.json"
+}
