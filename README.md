@@ -5,72 +5,58 @@
 This script scrapes Reddit posts and their comments using the Reddit API. Follow these steps to configure and run the script.
 
 
-1\. Set Up Reddit API Credentials
+1. Set Up Reddit API Credentials
 
-Create a new application if you don't already have one:
-
-Client ID
-Client Secret
-Username
-Password
-User Agent (e.g., python\:my\_reddit\_scraper\:v1.0 (by /u/your\_username)).
+To get started, create a Reddit application if you don't already have one. Visit Reddit App Preferences to create the app and take note of your credentials.
 
 
-2\. Configure config.json
+2.  Configure config.json
 
 
 Update the config.json file with your credentials and desired settings. Below is an example configuration file:
 
+```
 {
-
-&#x20;   "client\_id": "your\_client\_id",
-
-&#x20;   "client\_secret": "your\_client\_secret",
-
-&#x20;   "user\_agent": "python\:my\_reddit\_scraper\:v1.0 (by /u/your\_username)",
-
-&#x20;   "username": "your\_username",
-
-&#x20;   "password": "your\_password",
-
-&#x20;   "reddit\_thread": "funny",
-
-&#x20;   "max\_post": 1000,
-
-&#x20;   "start\_post": 5,
-
-&#x20;   "end\_post": 15,
-
-&#x20;   "filename": "funny.json"
-
+    "client_id": "your_client_id",
+    "client_secret": "your_client_secret",
+    "user_agent": "python:my_reddit_scraper:v1.0 (by /u/your_username)",
+    "username": "your_username",
+    "password": "your_password",
+    "reddit_thread": "funny",
+    "max_post": 1000,
+    "start_post": 1,
+    "end_post": 1000,
+    "filename": "funny.json"
 }
 
+```
 
 Configuration Fields:
 
-client\_id: Your Reddit API client ID.
-client\_secret: Your Reddit API client secret.
-user\_agent: A unique identifier for your application.
-username: Your Reddit username.
-password: Your Reddit password.
-reddit\_thread: The subreddit you want to scrape (e.g., worldnews).
-max\_post: Maximum number of posts to scrape (limit to <=1000).
-filename: The name of the output file (e.g., worldnews.json).
+- client\_id: Your Reddit API client ID.
+- client\_secret: Your Reddit API client secret.
+- user\_agent: A unique identifier for your application.
+- username: Your Reddit username.
+- password: Your Reddit password.
+- reddit\_thread: The subreddit you want to scrape (e.g., worldnews).
+- max\_post: Maximum number of posts to scrape (limit to <=1000).
+- filename: The name of the output file (e.g., worldnews.json).
+- start_post or end_post: Ignore for now
 
 
 
-3\. Install Dependencies
+3.   Install Dependencies
 
 
 Ensure Python is installed, then install the required library:
 
 
-
+```
 pip install praw
+```
 
 
-
-4\. Run the Script
+4.   Run the Script
 
 
 
@@ -81,12 +67,12 @@ Save the script and config.json in the same directory.
 Execute the script:
 
 
-
+```
 python your\_script\_name.py
+```
 
 
-
-5\. Output
+5.  Output
 
 
 
